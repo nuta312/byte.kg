@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<!-- suite is a test suite name - ex: Smoke, Regression -->
+<suite name="Smoke">
+    <!-- Test name in suite - ex: Cart, Checkout, Login, FrontEnd -->
+    <parameter name="browser" value="chrome"></parameter>
+    <test name="Cart">
+
+        <!-- Params -->
+        <!-- name is like a variable -->
+        <!-- value is the value of variable -->
+        <parameter name="userName" value="johnDoe"></parameter>
+        <parameter name="password" value="hardPass"></parameter>
+        <parameter name="quantity" value="4"></parameter>
+        <parameter name="price" value="20.99"></parameter>
+        <parameter name="isPrime" value="true"></parameter>
+        <parameter name="env" value="qa"></parameter>
+        <!-- classes declaring what test classes will be included, list out all classes   -->
+
+        <!--Choosing which groups of test should be run in this test suite -->
+        <groups>
+
+            <!-- define a new group which will consist of other group-->
+            <!-- Group can also be called a tag-->
+            <define name="smokeAndCheckout">
+                <include name="search" ></include>
+                <include name="smoke" ></include>
+                <include name="regression" ></include>
+            </define>
+<!--            <run>-->
+<!--                &lt;!&ndash; provide the group name that needs to be run &ndash;&gt;-->
+<!--                <include name="search" ></include>-->
+<!--                <include name="smoke" ></include>-->
+<!--            </run>-->
+<!--            <run>-->
+<!--                <include name="smokeAndCheckout"></include>-->
+<!--            </run>-->
+        </groups>
+        <classes>
+            <!-- Give the full package and className-->
+            <!-- declaring which classes should be scanned for tests -->
+<!--            <class name="tests.testNG.TestNGDemo1"></class>-->
+<!--            <class name="tests.testNG.TestNGDemo2"></class>-->
+<!--            <class name="tests.testNG.TestNGGroupsDemo"></class>-->
+            <class name="tests.testNG.Parameterization"></class>
+            <class name="tests.testNG.DataProviders"></class>
+            
+        </classes>
+    </test>
+</suite>
+
+        <!--  XSD is used to define the structure of xml file -->
+        <!-- In order to accomplish one submission for any transaction there are multiple small application
+          perform certain and specific task and forwarding messaging ahead to each other  -->
+
+        <!-- cmd + option l -->
+
+        <!--  xml files should be used as a final runner where we choose which tests among our many  test cases
+        we should run at given moment.(task - smoke, regression) -->

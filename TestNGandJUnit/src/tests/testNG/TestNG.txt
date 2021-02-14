@@ -1,0 +1,22 @@
+TestNG Interview Questions will be focused on
+
+// All questions should include explanation  setUp in xml
+1) BeforeSuite vs BeforeClass
+2) Parameterization
+3) Data Providers
+4) Groups
+5) Parallel execution of suites
+
+Maven in pom.xml
+
+Test FrameWork tool stack options:
+
+1) Junit and Cucumber
+
+2) TestNG by itself
+
+3)TestNG and Cucumber
+
+STAR --> Situation Task Action Result
+
+
